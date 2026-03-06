@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MindCare - Wellness Programs</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+min-height:100vh;
+background: linear-gradient(-45deg,#667eea,#764ba2,#6dd5ed,#2193b0);
+background-size:400% 400%;
+animation:gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+header{
+text-align:center;
+padding:30px;
+color:white;
+font-size:28px;
+font-weight:700;
+}
+
+nav{
+display:flex;
+justify-content:center;
+gap:20px;
+background:rgba(0,0,0,0.2);
+backdrop-filter:blur(10px);
+padding:12px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+padding:10px 20px;
+border-radius:30px;
+transition:0.3s;
+}
+
+nav a:hover{
+background:white;
+color:#333;
+transform:translateY(-2px);
+}
+
+.container{
+max-width:1000px;
+margin:60px auto;
+padding:40px;
+
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(15px);
+border-radius:20px;
+
+color:white;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+
+animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+.container h1{
+text-align:center;
+margin-bottom:30px;
+font-size:32px;
+}
+
+.programs{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:rgba(255,255,255,0.3);
+padding:25px;
+border-radius:15px;
+text-align:center;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:rgba(255,255,255,0.5);
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+font-size:14px;
+line-height:1.6;
+}
+
+footer{
+text-align:center;
+padding:20px;
+color:white;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+🌿 MindCare Wellness Programs
+</header>
+
+<nav>
+<a href="{% url 'dashboard' %}">📊 Dashboard</a>
+<a href="{% url 'home' %}">🏠 Home</a>
+<a href="{% url 'awareness' %}">🧠 Mental Health Awareness</a>
+<a href="{% url 'consultation' %}">💬 Consultation</a>
+</nav>
+
+<div class="container">
+
+<h1>Wellness Activities</h1>
+
+<div class="programs">
+
+<div class="card">
+<h3>🧘 Yoga Therapy</h3>
+<p>Improve mental clarity and emotional balance through guided yoga sessions designed for relaxation and stress relief.</p>
+</div>
+
+<div class="card">
+<h3>🧠 Mindfulness Training</h3>
+<p>Practice mindfulness techniques that help individuals stay present and manage anxiety and emotional stress.</p>
+</div>
+
+<div class="card">
+<h3>🧘 Meditation Classes</h3>
+<p>Guided meditation sessions that promote inner peace, concentration, and emotional stability.</p>
+</div>
+
+<div class="card">
+<h3>🌿 Self-Care Workshops</h3>
+<p>Interactive programs teaching healthy habits, emotional resilience, and positive coping strategies.</p>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 MindCare | Building Healthy Minds 🌿
+</footer>
+
+</body>
+</html>

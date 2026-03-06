@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MindCare - Consultation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+min-height:100vh;
+background: linear-gradient(-45deg,#667eea,#764ba2,#6dd5ed,#2193b0);
+background-size:400% 400%;
+animation:gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+header{
+text-align:center;
+padding:30px;
+color:white;
+font-size:28px;
+font-weight:700;
+}
+
+nav{
+display:flex;
+justify-content:center;
+gap:20px;
+background:rgba(0,0,0,0.2);
+backdrop-filter:blur(10px);
+padding:12px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+padding:10px 20px;
+border-radius:30px;
+transition:0.3s;
+}
+
+nav a:hover{
+background:white;
+color:#333;
+transform:translateY(-2px);
+}
+
+.container{
+max-width:900px;
+margin:60px auto;
+padding:40px;
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(15px);
+border-radius:20px;
+color:white;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+.container h1{
+margin-bottom:20px;
+font-size:32px;
+}
+
+.container p{
+margin-bottom:20px;
+line-height:1.7;
+}
+
+form{
+margin-top:20px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input, select, textarea{
+padding:12px;
+border:none;
+border-radius:10px;
+font-family:'Poppins',sans-serif;
+}
+
+textarea{
+resize:none;
+height:100px;
+}
+
+button{
+padding:12px;
+border:none;
+border-radius:30px;
+background:white;
+color:#333;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#333;
+color:white;
+transform:scale(1.05);
+}
+
+footer{
+text-align:center;
+padding:20px;
+color:white;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+💬 MindCare Professional Consultation
+</header>
+
+<nav>
+<a href="{% url 'dashboard' %}">📊 Dashboard</a>
+<a href="{% url 'home' %}">🏠 Home</a>
+<a href="{% url 'awareness' %}">🧠 Mental Health Awareness</a>
+<a href="{% url 'wellness' %}">🌿 Wellness Programs</a>
+</nav>
+
+<div class="container">
+
+<h1>Book a Consultation</h1>
+
+<p>
+Schedule a confidential session with licensed mental health professionals. 
+Our consultations provide guidance, emotional support, and mental health care 
+for children, adults, and families.
+</p>
+
+<form>
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<select required>
+<option value="">Select Consultation Type</option>
+<option>Individual Counseling</option>
+<option>Family Therapy</option>
+<option>Child & Teen Counseling</option>
+<option>Stress & Anxiety Support</option>
+</select>
+
+<textarea placeholder="Describe your concern"></textarea>
+
+<button type="submit">Book Appointment</button>
+
+</form>
+
+</div>
+
+<footer>
+© 2026 MindCare | Confidential Mental Health Support 💙
+</footer>
+
+</body>
+</html>
